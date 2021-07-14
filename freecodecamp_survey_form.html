@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Survey Form</title>
+    <style>
+       body {
+           background-image: url("https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+           background-size: cover;
+           background-repeat: no-repeat;
+        } 
+        #main {
+           text-align: center;
+           color: azure;
+           width: 50%;
+           margin: auto;  
+       }
+       #survey-form {
+            background: rgba(85, 60, 90, 0.7);
+            text-align: left;
+            padding-left: 25px;
+            padding-top: 30px;
+            padding-bottom: 25px;
+            border-radius: 15px;
+       }
+        .heading {
+            font-family:'Times New Roman', Times, serif;
+            font-size: 20px;         
+        }
+        label {
+            padding: 4px;
+            font-size: 20px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        input {
+            display: inline;
+            height: 20px;
+            padding: 4px;
+            font-size: 15px;
+            border-radius: 4px;
+            border: none;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        #name,#email,#number {
+            width: 90%;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+        #male,#female,#other {
+            display: inline;
+            padding-right: 100%; 
+        }
+        #male-label,#female-label,#other-label {
+            display: inline;
+        }
+        #commentdesc {
+            padding: 4px;
+            font-size: 20px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        #comment {
+            width: 90%;
+            font-size: 17px;
+            padding: 9px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        #submit {
+            background-color: seagreen;
+            font-size: 20px;
+            width: 95%;
+            height: 40px;
+            color: seashell;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "main">
+        <h1 id="title">Computer Science Students Survey Form</h1>
+        <p id="description">Thank you for taking the time to complete the survey</p>
+        <form id="survey-form">
+            <!-- This is the input field for student name -->
+            <label for = "name" id="name-label" >Name :</label> 
+            <input type="text" id="name" placeholder="Enter your name" required><br> 
+
+            <!-- This is the input field for students email address -->
+            <label for = "email" id="email-label" >E-Mail address :</label> 
+            <input type="email" id="email" placeholder="Enter your email address" required><br> 
+
+            <!-- This is the input field for students age -->
+            <label for = "number" id="number-label" >Age :</label> <br>
+            <input type="number" id="number" placeholder="Enter your age" min="10" max="110" required>
+
+            <!-- This is the input field for students gender -->
+            <p class="heading">Please select your Gender</p>
+            <input type="radio" id = "male" name= "gender" value = "male">
+            <label for="male" id = "male-label">Male</label><br> 
+            <input type="radio" id = "female" name= "gender" value = "female">
+            <label for="female" id = "female-label">Female</label><br> 
+            <input type="radio" id = "other" name= "gender" value = "other">
+            <label for="other" id = "other-label">Other</label><br> 
+
+            <!-- This is the input field for students jobs preference -->
+            <p class="heading">Select your job preference</p>
+            <label for="dropdown" ></label>
+            <input list="dropdown" placeholder="Your job preference" required>
+            <datalist id = "dropdown">
+            <option value="Software Developer">
+            <option value="Information Security Analysts">
+            <option value="Computer Systems Analysts">
+            <option value="Computer and Information Systems Manager">
+            <option value="Computer and Information Research Scientists">
+            <option value="Computer Network Architect">     
+            <option value="Network and Computer Systems Administrators">
+            <option value="Database Administrator">
+            <option value="Web Developer">
+            <option value="Computer Support Specialists">
+            </datalist>
+
+            <!-- This input field is for selecting programming languages -->
+            <p class="heading">Which programming languages do you Know ?</p>
+            <input type="checkbox" id="language1" name="language1" value="Python">
+            <label for="language1">Python</label><br> 
+            <input type="checkbox" id="language2" name="language2" value="PHP">
+            <label for="language2">PHP</label> <br>
+            <input type="checkbox" id="language" name="language3" value="Kotlin">
+            <label for="language3">Kotlin</label> <br>
+            <input type="checkbox" id="language4" name="language4" value="R">
+            <label for="language4">R</label> <br>
+            <input type="checkbox" id="language5" name="language5" value="Java">
+            <label for="language5">Java</label> <br>
+            <input type="checkbox" id="language6" name="language6" value="Swift">
+            <label for="language6">Swift</label> <br>
+            <input type="checkbox" id="language7" name="language7" value="JavaScript">
+            <label for="language7">JavaScript</label> <br>
+            <input type="checkbox" id="language8" name="language8" value="C++">
+            <label for="language8">C++</label> <br>
+            <input type="checkbox" id="language9" name="language9" value="Golang">
+            <label for="language9">Golang</label> <br>
+            <input type="checkbox" id="language10" name="language10" value="C #">
+            <label for="language10">C #</label> <br>
+            <input type="checkbox" id="language11" name="language11" value="html_css">
+            <label for="language11">HTML / CSS</label>  <br>  
+            <input type="checkbox" id="language12" name="language12" value="other">
+            <label for="language12">Other</label>      <br>          
+
+            <!-- This input field is for textarea -->
+            <p id= "commentdesc">Any comment or suggestion to improve the survey</p>
+            <label for="comment" ></label> 
+            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Enter your comment here..."></textarea> 
+
+            <!-- This input field is for submitting the form-->
+            <input type="submit" value = "Submit" id="submit">
+        </form>
+    </div>
+</body>
+</html>
